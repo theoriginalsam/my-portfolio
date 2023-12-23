@@ -1,22 +1,49 @@
+"use client";
+
 import Image from "next/image";
+
+import { TypeAnimation } from 'react-type-animation';
+
+
+
 
 export default function Herosection() {
     return (
         <section className="">
  
        <div className="grid grid-cols-1 lg:grid-cols-12">
-        <div className="col-span-7 place-self-center">
+        <div className="col-span-7 place-self-center text-center">
             <h1 className="text-4xl lg:text-6xl text-white font-black">
-            Hello, I am Samir  
+            <span className="text-[#6f73f0] bg-clip-text  ">Hello, I am {""}
+                </span>
+                <br></br>
+                <TypeAnimation
+      sequence={[
+        // Same substring at the start will only be typed out once, initially
+        'Samir',
+        1000, // wait 1s before replacing "Mice" with "Hamsters"
+        'a Full Stack Developer',
+        1000,
+        'a Web Developer',
+        1000,
+        'Graphic Designer',
+        1000
+      ]}
+      wrapper="span"
+      speed={50}
+      
+      repeat={Infinity}
+    />
+                 
             </h1>
-            <p className="text-white text-xl lg:text-2xl mb-6">
+            <p className="text-white text-xl lg:text-2xl mb-6 text-center">
             I am a full stack developer. I love to code and learn new things.
             </p>
-            <div className="flex space-x-4">
+            <div className="space-x-4 ">
             <button className="bg-[#F5F5F5] text-black px-4 py-2 rounded-full text-xl font-semibold">
                 Hire Me
             </button>
-            <button className="bg-transparent border-solid border-2 border-slate-200 text-slate-200 px-4 py-2 rounded-full text-xl font-semibold">
+            <button className="bg-transparent border-solid border-2 border-[#6f73f0] text-slate-200 px-4 py-2 rounded-full text-xl font-semibold">
                 Resume
             </button>
             </div>
